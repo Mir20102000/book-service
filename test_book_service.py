@@ -2,9 +2,9 @@ import pytest
 from app.api.models import BookIn, BookOut, BookUpdate
 
 book = BookIn(
-    name='PSG',
-    language='France',
-    year=12
+    name='Bible',
+    language='Russian',
+    year=2000
 )
 
 
@@ -16,7 +16,7 @@ def test_create_book(book: BookIn = book):
 
 def test_update_book_name(book: BookIn = book):
     book_upd = BookOut(
-        name='PSG',
+        name='Bible',
         language=book.language,
         year=book.year,
         id=1
